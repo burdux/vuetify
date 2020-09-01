@@ -11,7 +11,9 @@
                         <v-icon>mdi-view-dashboard</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title>Dashboard</v-list-item-title>
+                        <v-list-item-title>
+                            <router-link to="todos">Todos</router-link>
+                        </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
                 <v-list-item link>
@@ -73,7 +75,7 @@
                     class="fill-height"
                     fluid
             >
-
+                <router-view></router-view>
             </v-container>
         </v-main>
 
@@ -97,7 +99,7 @@
         }),
 
         created () {
-            this.$vuetify.theme.dark = true
+            // this.$vuetify.theme.dark = true
         },
     };
 </script>
