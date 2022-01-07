@@ -1,58 +1,58 @@
 <template>
     <v-row
-            align="center"
-            justify="center"
+        align="center"
+        justify="center"
     >
         <v-col
-                sm="8"
-                md="7"
-                lg="4"
-                xl="4"
+            sm="8"
+            md="7"
+            lg="4"
+            xl="4"
         >
             <v-card class="elevation-12">
                 <v-toolbar
-                        color="primary"
-                        dark
-                        flat
+                    color="primary"
+                    dark
+                    flat
                 >
                     <v-toolbar-title>Login</v-toolbar-title>
                 </v-toolbar>
                 <v-card-text>
                     <v-form
-                            ref="form"
-                            v-model="valid"
-                            lazy-validation
+                        ref="form"
+                        v-model="valid"
+                        lazy-validation
                     >
                         <v-text-field
-                                v-model="username"
-                                :rules="userNameRules"
-                                label="Username"
-                                prepend-icon="mdi-account"
-                                type="text"
-                                required
+                            v-model="username"
+                            :rules="userNameRules"
+                            label="Username"
+                            prepend-icon="mdi-account"
+                            type="text"
+                            required
                         ></v-text-field>
 
                         <v-text-field
-                                v-model="password"
-                                :rules="passwordRules"
-                                label="Password"
-                                prepend-icon="mdi-lock"
-                                :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                                @click:append="show1 = !show1"
-                                :type="show1 ? 'text' : 'password'"
-                                required
+                            v-model="password"
+                            :rules="passwordRules"
+                            label="Password"
+                            prepend-icon="mdi-lock"
+                            :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                            @click:append="show1 = !show1"
+                            :type="show1 ? 'text' : 'password'"
+                            required
                         ></v-text-field>
 
                         <v-checkbox
-                                v-model="checkbox"
-                                label="Remember me?"
+                            v-model="checkbox"
+                            label="Remember me?"
                         ></v-checkbox>
                     </v-form>
                 </v-card-text>
                 <v-card-actions>
                     <v-btn
-                            color="primary"
-                            @click="routeToRegister"
+                        color="primary"
+                        @click="routeToRegister"
                     >
                         Register
                     </v-btn>
@@ -60,10 +60,10 @@
                     <v-spacer></v-spacer>
 
                     <v-btn
-                            :disabled="!valid"
-                            color="primary"
-                            @click="validate"
-                            type="submit"
+                        :disabled="!valid"
+                        color="primary"
+                        @click="validate"
+                        type="submit"
                     >
                         Login
                     </v-btn>
